@@ -1,0 +1,218 @@
+{
+  "products":[
+    {
+      "id":0,
+      "brand":"Zara Home",
+      "name":"Decorated wood mirror",
+      "price":8990,
+      "images":["./images/items/0_image1.jpg",
+                "./images/items/0_image2.jpg",
+                "./images/items/0_image3.jpg"],
+      "type":"mirror",
+      "text":"Square mirror with carved decorative wood frame."
+    },
+    {
+      "id":1,
+      "brand":"Zara Home",
+      "name":"Mirror with antique finish glass",
+      "price":8990,
+      "images":["./images/items/1_image1.jpg",
+                "./images/items/1_image2.jpg",
+                "./images/items/1_image3.jpg"],
+      "type":"mirror",
+      "text":"Square mirror with antique finish glass."
+    },
+    {
+      "id":2,
+      "brand":"Zara Home",
+      "name":"Small irregulsr-shaped mirror",
+      "price":6200,
+      "images":["./images/items/2_image1.jpg",
+                "./images/items/2_image2.jpg",
+                "./images/items/2_image3.jpg"],
+      "type":"mirror",
+      "text":"Small irregular-shaped mirror with a black frame.Features three anchor points for horizontal and vertical placement."
+    },
+    {
+      "id":3,
+      "brand":"Zara Home",
+      "name":"Large round mirror with metal frame",
+      "price":13300,
+      "images":["./images/items/3_image1.jpg",
+                "./images/items/3_image2.jpg",
+                "./images/items/3_image3.jpg"],
+      "type":"mirror",
+      "text":"Large round mirror to hang on the wall. Features a fine metal frame with a plain design."
+    },
+    {
+      "id":4,
+      "brand":"IKEA",
+      "name":"LANGESUND",
+      "price":5300,
+      "images":["./images/items/4_image1.jpg",
+                "./images/items/4_image2.jpg",
+                "./images/items/4_image3.jpg"],
+      "type":"mirror",
+      "text":"Fits anywhere in the home and is also tested and approved for bathrooms."
+    },
+    {
+      "id":5,
+      "brand":"IKEA",
+      "name":"SANDTORG",
+      "price":8990,
+      "images":["./images/items/5_image1.jpg",
+                "./images/items/5_image2.jpg",
+                "./images/items/5_image3.jpg"],
+      "type":"mirror",
+      "text":"Full-length mirror. Can be hung horizontally or vertically."
+    },
+    {
+      "id":6,
+      "brand":"IKEA",
+      "name":"STOCKHOLM",
+      "price":4460,
+      "images":["./images/items/6_image1.jpg",
+                "./images/items/6_image2.jpg",
+                "./images/items/6_image3.jpg"],
+      "type":"mirror",
+      "text":"The frame around the bottom of the mirror forms a shelf where you can put your make up, mobile phone or wallet."
+    },
+    {
+      "id":7,
+      "brand":"IKEA",
+      "name":"LUNNOM",
+      "price":1200,
+      "images":["./images/items/7_image1.jpg",
+                "./images/items/7_image2.jpg",
+                "./images/items/7_image3.jpg"],
+      "type":"mirror",
+      "text":"LED technology allows you to simulate an incandescent filament, which in combination with the decorative finish of the base makes the light bulb look like an old one."
+    },
+    {
+      "id":8,
+      "brand":"IKEA",
+      "name":"EVEDAL",
+      "price":13300,
+      "images":["./images/items/8_image1.jpg",
+                "./images/items/8_image2.jpg",
+                "./images/items/8_image3.jpg"],
+      "type":"mirror",
+      "text":"This lamp with an internal opaque glass shade and an external colored glass shade provides directional lighting and mood lighting."
+    },
+    {
+      "id":9,
+      "brand":"IKEA",
+      "name":"SKAFTET/REGNSKUR",
+      "price":5700,
+      "images":["./images/items/9_image1.jpg",
+                "./images/items/9_image2.jpg",
+                "./images/items/9_image3.jpg"],
+      "type":"mirror",
+      "text":"The textile lampshade, which gently diffuses the light, creates a cozy and inviting atmosphere in the room."
+    },
+
+
+    {
+      "id":10,
+      "brand":"Zara Home",
+      "name":"Glass vase",
+      "price":2600,
+      "images":["./images/items/10_image1.jpg",
+                "./images/items/10_image2.jpg",
+                "./images/items/10_image3.jpg"],
+      "type":"mirror",
+      "text":"Pale pink glass vase. May be filled with water."
+    },
+    {
+      "id":11,
+      "brand":"Zara Home",
+      "name":"Shiny ceramic vase",
+      "price":4600,
+      "images":["./images/items/11_image1.jpg",
+                "./images/items/11_image2.jpg",
+                "./images/items/11_image3.jpg"],
+      "type":"mirror",
+      "text":"Shiny white ceramic vase. May be filled with water."
+    },
+    {
+      "id":12,
+      "brand":"Zara Home",
+      "name":"Crackled-effect vase",
+      "price":5700,
+      "images":["./images/items/12_image1.jpg",
+                "./images/items/12_image2.jpg",
+                "./images/items/12_image3.jpg"],
+      "type":"mirror",
+      "text":"Glass vase with crackled effect. May be filled with water."
+    },
+    {
+      "id":13,
+      "brand":"IKEA",
+      "name":"TONSÄTTA",
+      "price":990,
+      "images":["./images/items/13_image1.jpg",
+                "./images/items/13_image2.jpg",
+                "./images/items/13_image3.jpg"],
+      "type":"mirror",
+      "text":"Blown glass; each vase is made by a skilled craftsman."
+    },
+    {
+      "id":14,
+      "brand":"IKEA",
+      "name":"STILREN",
+      "price":890,
+      "images":["./images/items/14_image1.jpg",
+                "./images/items/14_image2.jpg",
+                "./images/items/14_image3.jpg"],
+      "type":"mirror",
+      "text":"You can put flowers in the vase or use it without flowers as an accessory for interior decoration."
+    },
+
+
+    {
+      "id":15,
+      "brand":"Zara Home",
+      "name":"Marble-effect candle",
+      "price":620,
+      "images":["./images/items/15_image1.jpg",
+                "./images/items/15_image2.jpg",
+                "./images/items/15_image3.jpg"],
+      "type":"mirror",
+      "text":"Blue wax candle with a marbled effect."
+    },
+    {
+      "id":16,
+      "brand":"Zara Home",
+      "name":"Long candle (pack of 2)",
+      "price":890,
+      "images":["./images/items/16_image1.jpg",
+                "./images/items/16_image2.jpg",
+                "./images/items/16_image3.jpg"],
+      "type":"mirror",
+      "text":"Basic long candle for candlesticks. Sold in packs of 2. WARNING: - Keep in view. - Keep away from children. - Place vertically on a suitable surface. - Keep away from draughts and flammable objects."
+    },
+    {
+      "id":17,
+      "brand":"IKEA",
+      "name":"FENOMEN",
+      "price":400,
+      "images":["./images/items/17_image1.jpg",
+                "./images/items/17_image2.jpg",
+                "./images/items/17_image3.jpg"],
+      "type":"mirror",
+      "text":"The flickering of a candle will create a welcoming atmosphere at any moment-it will light up a dark winter morning, turn an ordinary dinner into a romantic one and make the room more cozy."
+    },
+    {
+      "id":18,
+      "brand":"IKEA",
+      "name":"BLOMDOFT",
+      "price":400,
+      "images":["./images/items/18_image1.jpg",
+                "./images/items/18_image2.jpg",
+                "./images/items/18_image3.jpg"],
+      "type":"mirror",
+      "text":"The floral fragrance of gladiolus with fresh notes of citrus and lily."
+    } 
+
+  ]
+}

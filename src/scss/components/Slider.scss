@@ -1,0 +1,34 @@
+.item-images{
+  width: 900px;
+  .item-slider{
+    display: flex;
+    overflow-x: hidden;
+    height: 570px;
+    width: 100%;
+    img{
+      margin-right: 10px;
+    }
+  }
+  .arrow{
+    float: right;
+    height: 60px;
+    width: 60px;
+    img{
+      transform: rotate(90deg);
+    }
+  }
+}
+@media (min-width:1280px) and (max-width:1439px){
+  .item-images{
+    width: 750px;
+  }
+}
+@media screen and (max-width:1279px){
+  .item-images{
+    width: 100%;
+    .item-slider{
+      height: 400px;
+      width: 100%;
+    }
+  }
+}

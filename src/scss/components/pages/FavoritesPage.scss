@@ -1,0 +1,23 @@
+.favs-page{
+  margin: 35px 0 120px;
+  .favs-items{
+    margin: 25px 0 75px;
+  }
+  .favs-page__title{
+    font-family: uni sans;
+    font-size: 48px;
+  }
+  
+}
+@media screen and (max-width:1279px){
+  .favs-page{
+    margin: 13px 0 50px;
+    .favs-items{
+      margin: 13px 0 80px;
+    }
+    .favs-page__title{
+      font-size: 24px;
+    }
+    
+  }
+}
