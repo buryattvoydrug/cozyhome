@@ -1,26 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component, useContext } from 'react'
 import ToTopButton from '../ToTopButton'
 import Item from '../Item'
 import Filter from '../Filter'
 
 import '../../scss/components/pages/Main.scss'
+import { GlobalState } from '../../GlobalState'
 
-export class Main extends Component {
-  render() {
-    return (
-      <section className="main-page">
+
+function Main() {
+
+  const state = useContext(GlobalState)
+  const [products] = state.productsAPI.products
+  console.log(products)
+
+  return (
+    <section className="main-page">
       <Filter/>
       <div className="items-list">
-
-        <Item/>
-        <Item/>
-        <Item/>
-        <Item/>
-        <Item/>
-        <Item/>
-        <Item/>
-        <Item/>
-        <Item/>
+        {
+          products.map(product => {
+            return <Item key={product._id} product={product}/>
+          })
+        }
 
       </div>
 
@@ -28,8 +29,7 @@ export class Main extends Component {
 
       <ToTopButton/>
     </section>
-    )
-  }
+  )
 }
 
 export default Main

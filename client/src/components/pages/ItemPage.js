@@ -1,29 +1,48 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {isMobile} from "react-device-detect"
 import Slider from '../Slider'
 import ToTopButton from '../ToTopButton'
 
 import '../../scss/components/pages/ItemPage.scss'
+import { GlobalState } from '../../GlobalState'
+import { useParams } from 'react-router'
+import { Link } from 'react-router-dom'
 
-function ItemPage() {
+function ItemPage({product}) {
+  const params=useParams()
+  const state = useContext(GlobalState)
+  const [products] = state.productsAPI.products
+  const [detailProduct,setDetailProduct] = useState([])
+
+  useEffect(()=>{
+    if (params){
+      products.forEach(product => {
+        if(product._id === params.id)
+        setDetailProduct(product)
+      });
+    }
+  },[params,products])
+
+  if(detailProduct.length === 0) return null
+
   return (
     <section className="item-page">
       <div className="item-text-block">
-        <h1 className="item__title">Zara</h1>
-        <h2 className="item__subtitle">DECORATED WOOD MIRROR</h2>
-        <span className="price">RUB 9990</span>
+        <h1 className="item__title">{detailProduct.title}</h1>
+        <h2 className="item__subtitle">{detailProduct.content}</h2>
+        <span className="price">RUB {detailProduct.price}</span>
         {isMobile ? <Slider/> : null}
           <div className="item-buttons">
-            <button className="add-to-cart__button">
+            <Link id="btn_buy" to="#!" className="add-to-cart__button">
               <img src="images/shopping-cart.svg" alt=""/>
               <span>Add to cart</span>
-            </button>
+            </Link>
           </div>
           <p className="items__info">
-          Square mirror with carved decorative wood frame.
+          {detailProduct.description}
           </p>
       </div>
-      {isMobile ? <ToTopButton/>:<Slider/>}
+      {isMobile ? <ToTopButton/>:<Slider images={detailProduct.images}/>}
     </section>
   )
 }
