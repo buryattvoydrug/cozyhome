@@ -8,23 +8,28 @@ import CartPage from './components/pages/CartPage';
 
 
 import './scss/App.scss';
+import { DataProvider } from './GlobalState';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Pages from './components/Pages';
 
 
 function App() {
 
   return (
-    <div className="wrapper">
-      <div className="container">
-        <Header/>
-      </div>
-      <div className="page-container">
-        {/* <ItemPage/>
-        <CartPage/> */}
-        <Main/>
-      </div>
-      <Sales/>
-      <Footer/>
-    </div>
+    <DataProvider>
+      <Router>
+        <div className="wrapper">
+          <div className="container">
+            <Header/>
+          </div>
+          <div className="page-container">
+            <Pages/>
+          </div>
+          <Sales/>
+          <Footer/>
+        </div>
+      </Router>
+    </DataProvider>
   );
 } 
 

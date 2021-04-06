@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {isMobile} from 'react-device-detect'
+import { Link } from 'react-router-dom'
+import { GlobalState } from '../GlobalState'
 
 import '../scss/components/Header.scss'
 
 function Header() {
+
+  const value = useContext(GlobalState)
+
   return (
     <header>
-      <div className="logo">
+      <Link to="/" className="logo">
         <div className="logo__text">cozy<br/>home</div>
         <img src="images/logo.png" alt=""/>
-      </div>
+      </Link>
       <div className="navbar">
         {isMobile ? null: 
         <div className="search">
@@ -24,9 +29,12 @@ function Header() {
             <img src="images/search.svg" alt=""/>
           </button>
         : null}
-          <button className="navbar__button">
+          <Link to="/login" className="navbar__button">
+            <img src="images/user.png" alt=""/>
+          </Link>
+          <Link to="/cart" className="navbar__button">
             <img src="images/shopping-cart.svg" alt=""/>
-          </button>
+          </Link>
           <span className="summ">RUB 0</span>
         </div>
       </div>
