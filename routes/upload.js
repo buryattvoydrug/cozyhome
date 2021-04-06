@@ -12,7 +12,7 @@ cloudinary.config({
 })
 
 //upload images
-router.post('/upload',auth,authAdmin,(req,res)=>{
+router.post('/upload',(req,res)=>{
   try{
     
     if(!req.files || Object.keys(req.files).length===0)
