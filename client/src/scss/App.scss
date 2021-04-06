@@ -38,6 +38,12 @@ button,input{
   display: flex;
   flex-wrap: wrap;
 }
+.ContentLoader{
+
+}
+.mContentLoader:nth-child(2n+1){
+  margin-right: 15px;
+}
 .item{
   position: relative;
   width: 320px;
