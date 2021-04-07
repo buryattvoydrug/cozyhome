@@ -8,7 +8,7 @@ function Sales() {
         <div className="sales-slider">
           <div className="sale__item">
             <div className="container sale__item__text"><span>SALES UP TO 90%</span></div>
-            <img src="images/sale1.jpg" alt=""/>
+            <img src="/images/sale1.jpg" alt=""/>
           </div>
       </div>
     </div>

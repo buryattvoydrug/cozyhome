@@ -12,7 +12,7 @@ function Item({product}) {
               <h4 className="item__subtitle">{product.content}</h4>
               <span className="price">RUB {product.price}</span>
               <Link id="btn_buy" to="#!" className="add-to-cart__button">
-                <img src="images/shopping-cart.svg" alt=""/>
+                <img src="/images/shopping-cart.svg" alt=""/>
               </Link>
             </div>
         </div>

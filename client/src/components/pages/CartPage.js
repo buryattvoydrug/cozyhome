@@ -13,7 +13,7 @@ function CartPage() {
         <div className="cart-items">
           <div className="cart__item">
             <div className="cart__item-image">
-              <img src="images/items/0_image1.jpg" alt=""/>
+              <img src="/images/items/0_image1.jpg" alt=""/>
             </div>
             <div className="cart__item-text">
               <h3 className="item__title">Zara Home</h3>
@@ -22,17 +22,17 @@ function CartPage() {
               <div className="quality">
                 <strong>Quality</strong>
                   <button className="quality__button">
-                    <img src="images/minus.svg" alt=""/>
+                    <img src="/images/minus.svg" alt=""/>
                   </button>
                   <span>1</span>
                   <button className="quality__button">
-                    <img src="images/plus.svg" alt=""/>
+                    <img src="/images/plus.svg" alt=""/>
                   </button>
               </div>
               <span className="price">RUB 9990</span>
               <div className="item-buttons">
                 <button className="add-to-trash__button">
-                  <img src="images/trash.svg" alt=""/>
+                  <img src="/images/trash.svg" alt=""/>
                 </button>
               </div>
             </div>
@@ -57,13 +57,13 @@ function CartPage() {
           <span className='price'>RUB 9 990</span>
         </div>
         <button className="checkout__button">
-          <img src="images/checkout.svg" alt=""/>
+          <img src="/images/checkout.svg" alt=""/>
           <span>Checkout</span>
         </button>
       </div>
       {/* <div className="empty-cart">
         <h1 className="empty-cart__title">There are no items in your cart.</h1>
-        <img src="images/shopping-cart.svg" alt="" className="empty-cart__image"/>
+        <img src="/images/shopping-cart.svg" alt="" className="empty-cart__image"/>
       </div> */}
     </section>
   )

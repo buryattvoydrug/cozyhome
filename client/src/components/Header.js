@@ -13,27 +13,27 @@ function Header() {
     <header>
       <Link to="/" className="logo">
         <div className="logo__text">cozy<br/>home</div>
-        <img src="images/logo.png" alt=""/>
+        <img src="/images/logo.png" alt=""/>
       </Link>
       <div className="navbar">
         {isMobile ? null: 
         <div className="search">
           <input type="text" placeholder="Search something" className="search__input"/>
           <button className="search__button">
-            <img src="images/search.svg" alt=""/>
+            <img src="/images/search.svg" alt=""/>
           </button>
         </div>}
         <div className="navbar-buttons">
         {isMobile ?
           <button className="navbar__button">
-            <img src="images/search.svg" alt=""/>
+            <img src="/images/search.svg" alt=""/>
           </button>
         : null}
           <Link to="/login" className="navbar__button">
-            <img src="images/user.png" alt=""/>
+            <img src="/images/user.png" alt=""/>
           </Link>
           <Link to="/cart" className="navbar__button">
-            <img src="images/shopping-cart.svg" alt=""/>
+            <img src="/images/shopping-cart.svg" alt=""/>
           </Link>
           <span className="summ">RUB 0</span>
         </div>

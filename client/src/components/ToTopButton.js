@@ -5,7 +5,7 @@ import '../scss/components/ToTopButton.scss'
 function ToTopButton() {
   return (
     <button className='to-top'>
-      <img src="images/arrow-button.svg" alt=""/>
+      <img src="/images/arrow-button.svg" alt=""/>
     </button>
   )
 }

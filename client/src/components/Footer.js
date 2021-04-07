@@ -18,9 +18,9 @@ function Footer() {
           <div className="footer-bottom">
             <span className="copyright">@buryattvoydug 2021</span>
             <div className="social">
-              <a><img src="images/youtube.svg"/></a>
-              <a><img src="images/facebook.svg"/></a>
-              <a><img src="images/instagram.svg"/></a>
+              <a><img src="/images/youtube.svg"/></a>
+              <a><img src="/images/facebook.svg"/></a>
+              <a><img src="/images/instagram.svg"/></a>
             </div>
           </div>
         </div>
