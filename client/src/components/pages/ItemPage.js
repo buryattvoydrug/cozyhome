@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import {isMobile} from "react-device-detect"
-import Slider from '../Slider'
+import Carousel from '../Carousel'
 import ToTopButton from '../ToTopButton'
 
 import '../../scss/components/pages/ItemPage.scss'
@@ -31,7 +31,7 @@ function ItemPage({product}) {
         <h1 className="item__title">{detailProduct.title}</h1>
         <h2 className="item__subtitle">{detailProduct.content}</h2>
         <span className="price">RUB {detailProduct.price}</span>
-        {isMobile ? <Slider/> : null}
+        {isMobile ? <Carousel images={detailProduct.images} /> : null}
           <div className="item-buttons">
             <Link id="btn_buy" to="#!" className="add-to-cart__button">
               <img src="images/shopping-cart.svg" alt=""/>
@@ -42,7 +42,7 @@ function ItemPage({product}) {
           {detailProduct.description}
           </p>
       </div>
-      {isMobile ? <ToTopButton/>:<Slider images={detailProduct.images}/>}
+      {isMobile ? <ToTopButton/>:<Carousel images={detailProduct.images}/>}
     </section>
   )
 }

@@ -5,7 +5,7 @@ function Item({product}) {
   return (
     <div className="item">
             <div className="item-image">
-              <img src={product.images.url} alt=""/>
+              <img src={product.images.url[0]} alt=""/>
             </div>
             <div className="item-text">
               <h3 className="item__title"><Link id="btn_view" to={`detail/${product._id}`}>{product.title}</Link></h3>
