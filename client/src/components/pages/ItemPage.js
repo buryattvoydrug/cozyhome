@@ -14,7 +14,7 @@ function ItemPage({product}) {
   const state = useContext(GlobalState)
   const [products] = state.productsAPI.products
   const [detailProduct,setDetailProduct] = useState([])
-
+  const addCart = state.userAPI.addCart
   const [item,setItem] = useState([])
   const [loading,setLoading] = useState(false)
 
@@ -49,7 +49,7 @@ function ItemPage({product}) {
                 <span className="price">RUB {detailProduct.price}</span>
                 {isMobile ? <Carousel images={detailProduct.images} /> : null}
                   <div className="item-buttons">
-                    <Link id="btn_buy" to="#!" className="add-to-cart__button">
+                    <Link id="btn_buy" to="#!" className="add-to-cart__button" onClick={() => addCart(detailProduct)}>
                       <img src="/images/shopping-cart.svg" alt=""/>
                       <span>Add to cart</span>
                     </Link>
