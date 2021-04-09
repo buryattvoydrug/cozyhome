@@ -27,7 +27,7 @@ function Filter() {
         {
           categories.map(category => (
                       <button className="filter__button"
-                       value={"category=" + category._id} onClick={handleCategory} key={category._id} >
+                       value={"category=" + category.name} onClick={handleCategory} key={category._id} >
                        {category.name}</button>
                         ))
         }
