@@ -30,17 +30,14 @@ function Filter() {
                        {category.name}</button>
                         ))
         }
-        {/* <button className="filter__button">Lighting</button>
-        <button className="filter__button filter__button_active">Mirror</button>
-        <button className="filter__button">Vases</button>
-        <button className="filter__button">Candles</button> */}
+
       </div>
       <div className="sort-block">
       <form value={sort} onChange={e => setSort(e.target.value)}>
 
                <div className="sort__label">
                 
-                <span className="sort__title">Sort by:
+                <span className="sort__title">Sort by: 
                 {
                   sort==="sort=price" ? "low-high price" : "  "
                 }

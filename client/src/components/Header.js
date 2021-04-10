@@ -39,8 +39,10 @@ function Header() {
             </>
         )
     }
+    
 
   const value = useContext(GlobalState)
+  const [search, setSearch] = value.productsAPI.search
 
   return (
     <header>
@@ -51,7 +53,9 @@ function Header() {
       <div className="navbar">
         {isMobile ? null: 
         <div className="search">
-          <input type="text" placeholder="Search something" className="search__input"/>
+        <input type="text" placeholder="Search something" className="search__input"
+       value={search} onChange={e => setSearch(e.target.value.toLowerCase())}
+    />
           <button className="search__button">
             <img src="/images/search.svg" alt=""/>
           </button>
