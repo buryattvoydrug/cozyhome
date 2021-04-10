@@ -1,7 +1,9 @@
 import React, { useContext, useState } from 'react'
+import { isMobile } from 'react-device-detect'
 import { GlobalState } from '../GlobalState'
 
 import '../scss/components/Filter.scss'
+import Search from './Search'
 
 function Filter() {
 
@@ -30,6 +32,7 @@ function Filter() {
 
   return (
     <div className="filter">
+      {isMobile? <Search/> : null}
       <div className="filter-block">
         <button className="filter__button all" value='' onClick={(e) => {setActiveCategory(''); handleCategory(e);}} >View all</button>
         {
@@ -45,6 +48,7 @@ function Filter() {
         }
 
       </div>
+      
       <div className="sort-block">
       <form value={sort} onChange={e => setSort(e.target.value)}>
 

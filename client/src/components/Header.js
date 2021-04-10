@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { GlobalState } from '../GlobalState'
 
 import '../scss/components/Header.scss'
+import Search from './Search'
 
 function Header() {
 
@@ -39,24 +40,8 @@ function Header() {
         <img src="/images/logo.png" alt=""/>
       </Link>
       <div className="navbar">
-        {isMobile ? null: 
-        <div className="search">
-        
-        <input type="text" placeholder="Search by brand" className="search__input" 
-       value={search} onChange={e => setSearch(e.target.value.toLowerCase())}
-        />
-      <Link to="/">
-          <button className="search__button">
-            <img src="/images/search.svg" alt=""/>
-          </button>
-          </Link>
-        </div>}
+        {isMobile ? null: <Search/>}
         <div className="navbar-buttons">
-        {isMobile ?
-          <button className="navbar__button">
-            <img src="/images/search.svg" alt=""/>
-          </button>
-        : null}
         {
           isLogged? loggedRouter() :  <Link to="/login" className="navbar__button">
                       <img src="/images/user.png" alt=""/>
