@@ -1,4 +1,4 @@
-import React, { Component, useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ToTopButton from '../ToTopButton'
 import Item from '../Item'
 import Filter from '../Filter'
@@ -7,6 +7,7 @@ import '../../scss/components/pages/Main.scss'
 import { GlobalState } from '../../GlobalState'
 import LoadingBlock from '../LoadingBlock'
 import axios from 'axios'
+import LoadMore from '../LoadMore'
 
 
 function Main() {
@@ -31,7 +32,6 @@ function Main() {
     const [token] = state.token
     const [callback, setCallback] = state.productsAPI.callback
     const [loading, setLoading] = useState(false)
-    const [isCheck, setIsCheck] = useState(false)
 
     const handleCheck = (id) =>{
         products.forEach(product => {
@@ -59,21 +59,6 @@ function Main() {
         }
     }
 
-    const checkAll = () =>{
-        products.forEach(product => {
-            product.checked = !isCheck
-        })
-        setProducts([...products])
-        setIsCheck(!isCheck)
-    }
-
-    const deleteAll = () =>{
-        products.forEach(product => {
-            if(product.checked) deleteProduct(product._id, product.images.public_id)
-        })
-    }
-
-    // if(loading) return <div><Loading /></div>
 
 
 
@@ -87,6 +72,7 @@ function Main() {
             deleteProduct={deleteProduct} handleCheck={handleCheck}/>
           }):Array(12).fill(0).map((_,index)=><LoadingBlock key={index}/>)}
       </div>
+      <LoadMore />
 
 
 
@@ -96,14 +82,3 @@ function Main() {
 }
 
 export default Main
-
-
-{/* <div className="sort-block">
-               <div className="sort__label">
-                <span className="sort__title">Sort by:</span>
-               </div>
-                <select className="sort__popup" value={sort} onChange={e => setSort(e.target.value)} >
-                 <option className="sort__item" value='sort=-price'>high-low price</option>
-                 <option className="sort__item" value='sort=price'>low-high price</option>
-                </select>
-      </div> */}

@@ -5,7 +5,7 @@ import '../scss/components/Filter.scss'
 
 function Filter() {
 
-
+  const [activeCategory, setActiveCategory] = useState('')
 
   const [isActive, setActive] = useState(false)
 
@@ -20,6 +20,7 @@ function Filter() {
   const [sort, setSort] = state.productsAPI.sort
   const [search, setSearch] = state.productsAPI.search
 
+
   const handleCategory = (e) =>  {
     setCategory(e.target.value)
     setSearch('')
@@ -30,16 +31,15 @@ function Filter() {
   return (
     <div className="filter">
       <div className="filter-block">
-        <button className="filter__button all" value='' onClick={handleCategory} >View all</button>
+        <button className="filter__button all" value='' onClick={(e) => {setActiveCategory(''); handleCategory(e);}} >View all</button>
         {
           categories.map(category => (
                       <button
-                       value={"category=" + category.name} onClick={handleCategory} key={category._id}
+                       value={"category=" + category.name} onClick={(e) => {setActiveCategory(e.target.value); handleCategory(e);}}  key={category._id}
                        className={
-                        "category=" + category.name ===  handleCategory?
+                        "category=" + category.name ===  activeCategory ?
                         "filter__button filter__button_active" : "filter__button"} >
                        {category.name}
-                       {handleCategory}
                        </button>
                         ))
         }
