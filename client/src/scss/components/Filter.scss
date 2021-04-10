@@ -25,6 +25,13 @@
       border-radius: 0px 0px 20px 20px;
       z-index: 2;
       margin-top: 15px;
+      form{
+        display: flex;
+        flex-direction: column;
+      }
+      input{
+        display: none;
+      }
       .sort__item{
         list-style-type: none;
         margin-bottom: 10px;

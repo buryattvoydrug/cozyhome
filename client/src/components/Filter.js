@@ -19,7 +19,6 @@ function Filter() {
 
 
 
-
   return (
     <div className="filter">
       <div className="filter-block">
@@ -37,20 +36,30 @@ function Filter() {
         <button className="filter__button">Candles</button> */}
       </div>
       <div className="sort-block">
+      <form value={sort} onChange={e => setSort(e.target.value)}>
+
                <div className="sort__label">
                 
-                <span className="sort__title">Sort by: high-low price </span>
-                <button></button>
+                <span className="sort__title">Sort by:
+                {
+                  sort==="sort=price" ? "low-high price" : "  "
+                }
+                {
+                  sort==="sort=-price" ? "high-low price" : "  "
+                }
+                </span>
                 <img 
                 src="images/arrow-down.svg" alt="" />
                </div>
                <div className="sort__popup">
-                <ul>
-                 <li className="sort__item">high-low price</li>
-                 <li className="sort__item">low-high price</li>
-                </ul>
+                 <input  id="-price" type="checkbox" value='sort=-price'  /><label className="sort__item" htmlFor="-price">high-low price</label>
+                 <input  id="price" type="checkbox" value='sort=price'/><label className="sort__item" htmlFor="price">low-high price</label>
+                
                </div>
+
+      </form>
       </div>
+
     </div>
   )
 }

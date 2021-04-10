@@ -96,3 +96,14 @@ function Main() {
 }
 
 export default Main
+
+
+{/* <div className="sort-block">
+               <div className="sort__label">
+                <span className="sort__title">Sort by:</span>
+               </div>
+                <select className="sort__popup" value={sort} onChange={e => setSort(e.target.value)} >
+                 <option className="sort__item" value='sort=-price'>high-low price</option>
+                 <option className="sort__item" value='sort=price'>low-high price</option>
+                </select>
+      </div> */}
