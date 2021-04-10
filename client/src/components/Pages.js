@@ -12,7 +12,6 @@ function Pages() {
 
   const state = useContext(GlobalState)
   const [isLogged] = state.userAPI.isLogged
-  const [isAdmin] = state.userAPI.isAdmin
 
 
   return (

@@ -1,0 +1,45 @@
+.login-page{
+  margin: 20px 0 100px;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 90%;
+    width: 500px;
+  }
+
+
+
+
+
+
+  .login__title{
+    font-family: uni sans;
+    font-weight: 900;
+    font-size: 48px;
+  }
+  .login{
+      font-family: archivoregular;
+      font-size: 22px;
+      border:1px solid #000;
+      margin: 5px 0;
+      padding: 10px 20px;
+      border-radius:15px;
+      width: 100%;
+  }
+  .login__button{
+    font-family: archivobold;
+    font-size: 22px;
+    cursor:pointer;
+  }
+}
+
+
+@media screen and (max-width:1279px){
+  .login-page{
+    form{
+      width: 90%;
+    }
+  }
+}

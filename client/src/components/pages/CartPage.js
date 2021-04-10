@@ -68,24 +68,16 @@ function CartPage() {
         }
     }
 
-    const tranSuccess = async(payment) => {
-        const {paymentID, address} = payment;
 
-        await axios.post('/api/payment', {cart, paymentID, address}, {
-            headers: {Authorization: token}
-        })
-
-        setCart([])
-        addToCart([])
-        alert("You have successfully placed an order.")
-    }
 
 
     if(cart.length === 0) 
-        return <div className="empty-cart">
+        return <div className="cart-page">
+          <div className="empty-cart">
                 <h1 className="empty-cart__title">There are no items in your cart.</h1>
                 <img src="/images/shopping-cart.svg" alt="" className="empty-cart__image"/>
               </div> 
+        </div> 
 
 
 
@@ -140,7 +132,7 @@ function CartPage() {
         </div>
         <div className="shipping">
           <span>Shipping & Handling</span>
-          <span className='price'>RUB 0</span>
+          <span className='price'>FREE</span>
         </div>
         <div className="total">
           <span>Total</span>

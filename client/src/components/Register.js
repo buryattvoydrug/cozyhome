@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 
+import '../scss/components/login.scss'
+
 function Register() {
     const [user, setUser] = useState({
         name:'', email:'', password: ''
@@ -29,20 +31,18 @@ function Register() {
     return (
         <div className="login-page">
             <form onSubmit={registerSubmit}>
-                <h2>Register</h2>
-                <input type="text" name="name" required
+                <h2 className="login__title">Register</h2>
+                <input type="text" className="login" name="name" required
                 placeholder="Name" value={user.name} onChange={onChangeInput} />
 
-                <input type="email" name="email" required
+                <input type="email" className="login" name="email" required
                 placeholder="Email" value={user.email} onChange={onChangeInput} />
 
-                <input type="password" name="password" required autoComplete="on"
+                <input type="password" name="password" className="login" required autoComplete="on"
                 placeholder="Password" value={user.password} onChange={onChangeInput} />
 
-                <div className="row">
-                    <button type="submit">Register</button>
-                    <Link to="/login">Login</Link>
-                </div>
+                    <button type="submit" className="login__button">Register</button>
+                    <Link to="/login" className="login__button">Login</Link>
             </form>
         </div>
     )

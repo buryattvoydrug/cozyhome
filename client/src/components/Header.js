@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import {isMobile} from 'react-device-detect'
 import { Link } from 'react-router-dom'
 import { GlobalState } from '../GlobalState'
@@ -10,9 +10,7 @@ function Header() {
 
   const state = useContext(GlobalState)
   const [isLogged] = state.userAPI.isLogged
-  const [isAdmin] = state.userAPI.isAdmin
   const [cart] = state.userAPI.cart
-  const [menu, setMenu] = useState(false)
 
   const logoutUser = async () =>{
         await axios.get('/user/logout')
@@ -22,21 +20,13 @@ function Header() {
         window.location.href = "/";
     }
 
-    const adminRouter = () =>{
-        return(
-            <>
-                <li><Link to="/create_product">Create Product</Link></li>
-                <li><Link to="/category">Categories</Link></li>
-            </>
-        )
-    }
+
 
     const loggedRouter = () =>{
         return(
-            <>
-                <li><Link to="/history">History</Link></li>
-                <li><Link to="/" onClick={logoutUser}>Logout</Link></li>
-            </>
+                <Link to="/" onClick={logoutUser} className="navbar__button">
+                  <img src="/images/exit.png" alt=""/>
+                </Link>
         )
     }
     
@@ -53,12 +43,15 @@ function Header() {
       <div className="navbar">
         {isMobile ? null: 
         <div className="search">
-        <input type="text" placeholder="Search something" className="search__input"
+        
+        <input type="text" placeholder="Search by brand" className="search__input" 
        value={search} onChange={e => setSearch(e.target.value.toLowerCase())}
-    />
+        />
+      <Link to="/">
           <button className="search__button">
             <img src="/images/search.svg" alt=""/>
           </button>
+          </Link>
         </div>}
         <div className="navbar-buttons">
         {isMobile ?
@@ -66,9 +59,12 @@ function Header() {
             <img src="/images/search.svg" alt=""/>
           </button>
         : null}
-          <Link to="/login" className="navbar__button">
-            <img src="/images/user.png" alt=""/>
-          </Link>
+        {
+          isLogged? loggedRouter() :  <Link to="/login" className="navbar__button">
+                      <img src="/images/user.png" alt=""/>
+                    </Link>
+        }
+          
           <Link to="/cart" className="navbar__button">
             <img src="/images/shopping-cart.svg" alt=""/>
           </Link>
